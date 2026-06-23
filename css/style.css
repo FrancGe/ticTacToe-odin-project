@@ -1,0 +1,34 @@
+html {
+    font-size: 62,5%
+}
+
+body {
+    font-size: 16px;
+}
+
+.contenedor {
+    width: 50rem;
+    height: 30rem;
+    background-color:cadetblue;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    justify-items: center;
+    align-content: center;
+    row-gap: 2rem;
+    padding: 2rem;
+
+.casilla {
+    background-color: rgb(231, 225, 225); 
+    width: 10rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: white;
+    }
+}

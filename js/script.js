@@ -41,3 +41,37 @@ const crearJugador = (nombre, marca) => {
         marca: marca
     };
 };
+
+const jugador1 = crearJugador("juagador1", "X");
+const jugador2 = crearJugador("juagador2", "O");
+
+const gameController = (function() {
+    const jugadores = [jugador1, jugador2];
+    const casillas = document.querySelectorAll(".casilla");
+    let indiceJugador = 0;
+
+    function click(e) {
+        const index = parseInt(e.target.dataset.index);
+        console.log("Clikc en: ", index);
+        const jugadorActual = jugadores[indiceJugador];
+        const pudoColocar = gameBoard.colocarFicha(index, jugadorActual.marca);
+
+        if(pudoColocar) {
+            e.target.textContent = jugadorActual.marca;
+
+            indiceJugador = indiceJugador === 0 ? 1 : 0;
+        }
+    }
+
+    function iniciar() {
+        casillas.forEach(casilla => {
+            casilla.addEventListener("click", click);
+        });
+    }
+
+    return {
+        iniciar: iniciar
+    };
+})();
+
+gameController.iniciar();
