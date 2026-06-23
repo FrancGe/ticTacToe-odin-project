@@ -1,5 +1,5 @@
 html {
-    font-size: 62,5%
+    font-size: 62.5%
 }
 
 body {
@@ -7,8 +7,8 @@ body {
 }
 
 .contenedor {
-    width: 50rem;
-    height: 30rem;
+    width: 60rem;
+    height: 40rem;
     background-color:cadetblue;
     border-radius: 1rem;
     display: grid;
@@ -18,10 +18,11 @@ body {
     align-content: center;
     row-gap: 2rem;
     padding: 2rem;
+}
 
 .casilla {
     background-color: rgb(231, 225, 225); 
-    width: 10rem;
+    width: 15rem;
     border: 2px solid black;
     border-radius: 1rem;
     display: flex;
@@ -30,5 +31,23 @@ body {
 
     &:hover {
         background-color: white;
+        cursor: pointer;
+    }
+}
+
+button {
+    border: none;
+    background-color: gray;
+    padding: 1rem 3rem;
+    margin: 2rem;
+    color: whitesmoke;
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    &:hover {
+        background-color: whitesmoke;
+        border: 2px solid gray;
+        color: gray;
+        cursor: pointer;
     }
 }
